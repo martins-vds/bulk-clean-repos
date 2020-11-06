@@ -4,7 +4,7 @@ This project is to showcase how to clean all the repos from a git repository usi
 
 ### Clone or backup all repos 
 
-curl -s https://api.github.com/users/peripona/repos?per_page=200 | ruby -rubygems -e 'require "json"; JSON.load(STDIN.read).each { |repo| %x[git clone #{repo["clone_url"]} ]}'
+curl -s https://api.github.com/users/martins-vds/repos?per_page=200 | ruby -rubygems -e 'require "json"; JSON.load(STDIN.read).each { |repo| %x[git clone #{repo["clone_url"]} ]}'
 
 > This might take some time, please make sure all your repos are backed, unless you don't care then leave this step.
 
